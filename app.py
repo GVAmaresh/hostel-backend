@@ -30,7 +30,15 @@ async def get_images(req: Dict[str, str]):
         )
     else:
         print("No files found in the folder.")
-
-
+        
+@app.get("/api/getImformation")
+async def get_imf():
+        return JSONResponse(
+            content={
+                "message": "Successfully API Working",
+                "data": None,
+                "success": True,
+            }
+        )
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
