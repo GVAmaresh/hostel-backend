@@ -31,7 +31,8 @@ async def get_images(req: Dict[str, str]):
     else:
         print("No files found in the folder.")
         
-@app.get("/api/getImformation")
+@app.get("/api/getImformation")   
+# nn
 async def get_imf():
         return JSONResponse(
             content={
